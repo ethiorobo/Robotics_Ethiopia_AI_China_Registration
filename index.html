@@ -14,10 +14,8 @@
       --blue: #123c76;
       --gold: #f7bc4a;
       --red: #e94747;
-      --cream: #fffaf0;
       --ink: #17243b;
       --muted: #66748a;
-      --white: #ffffff;
       --line: #e3e9f1;
       --shadow: 0 18px 55px rgba(8, 28, 58, .12);
     }
@@ -634,6 +632,7 @@
       background: #06152c;
       text-align: center;
       font-size: 13px;
+      overflow-wrap: anywhere;
     }
 
     footer a {
@@ -647,7 +646,7 @@
       font-weight: 900;
     }
 
-    /* Tablet layout */
+    /* Tablet */
     @media (max-width: 800px) {
       header {
         padding: 10px 4%;
@@ -676,7 +675,7 @@
       }
     }
 
-    /* Mobile phones */
+    /* Mobile */
     @media (max-width: 600px) {
       header {
         position: relative;
@@ -816,7 +815,6 @@
 
       footer {
         padding: 30px 5%;
-        overflow-wrap: anywhere;
       }
     }
 
@@ -883,7 +881,7 @@
   </header>
 
   <main>
-    <!-- HERO SECTION -->
+    <!-- Hero -->
     <section class="hero" id="home">
       <div class="hero-inner">
         <div class="hero-content">
@@ -920,7 +918,7 @@
       </div>
     </section>
 
-    <!-- HIGHLIGHTS -->
+    <!-- Highlights -->
     <section class="highlights" aria-label="Registration highlights">
       <div class="highlight">
         <span class="emoji">🤖</span>
@@ -947,7 +945,7 @@
       </div>
     </section>
 
-    <!-- OPPORTUNITY SECTION -->
+    <!-- Opportunity -->
     <section class="section" id="opportunity">
       <div class="section-heading">
         <span class="section-kicker">Your next chapter</span>
@@ -985,7 +983,7 @@
       </div>
     </section>
 
-    <!-- REGISTRATION SECTION -->
+    <!-- Registration -->
     <section class="section" id="register">
       <div class="section-heading">
         <span class="section-kicker">Registration portal</span>
@@ -998,7 +996,7 @@
 
       <div class="registration-layout">
 
-        <!-- PAYMENT INFORMATION -->
+        <!-- Payment details -->
         <aside class="payment-panel" id="payment">
           <h3>Registration payment</h3>
 
@@ -1036,7 +1034,7 @@
           </div>
         </aside>
 
-        <!-- REGISTRATION FORM -->
+        <!-- Registration form -->
         <div class="form-card">
           <h3>Student registration form</h3>
 
@@ -1044,11 +1042,6 @@
             Fields marked with <span class="required">*</span> are compulsory.
           </p>
 
-          <!--
-            IMPORTANT:
-            Standard POST + multipart/form-data is used for the
-            actual screenshot file attachment.
-          -->
           <form
             id="registrationForm"
             action="https://formsubmit.co/ethiorobo@gmail.com"
@@ -1174,22 +1167,7 @@
                 </select>
               </div>
 
-              <div class="field full">
-                <label for="transactionRef">
-                  Transaction reference / ID <span class="required">*</span>
-                </label>
-
-                <input
-                  id="transactionRef"
-                  name="Transaction Reference"
-                  type="text"
-                  placeholder="Enter transaction ID"
-                  required
-                  maxlength="100"
-                >
-              </div>
-
-              <!-- REQUIRED PAYMENT SCREENSHOT -->
+              <!-- Required payment screenshot -->
               <div class="field full">
                 <div class="upload-box">
                   <div class="upload-icon">📸</div>
@@ -1274,7 +1252,7 @@
       </div>
     </section>
 
-    <!-- TIKTOK SECTION - PRESERVED -->
+    <!-- TikTok section preserved -->
     <section class="section">
       <div class="social-banner">
         <div>
@@ -1297,7 +1275,7 @@
 
   </main>
 
-  <!-- FOOTER - PRESERVED -->
+  <!-- Footer preserved -->
   <footer>
     <div class="footer-brand">ETHIO ROBO ROBOTICS</div>
 
@@ -1405,9 +1383,8 @@
       }
 
       /*
-        Allow normal browser form submission.
-        The file is sent using multipart/form-data.
-        This is intentionally not converted to JSON AJAX.
+        Keep normal form submission with multipart/form-data
+        so the screenshot is sent as a real file attachment.
       */
       submitButton.textContent = "Submitting registration…";
       submitButton.disabled = true;
