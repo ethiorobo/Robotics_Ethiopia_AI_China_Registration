@@ -1,0 +1,538 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#071a35">
+  <meta name="description" content="Register for Ethio Robo Robotics training and discover the future of robotics, AI, and innovation.">
+
+  <title>Ethio Robo Robotics | Registration</title>
+
+  <style>
+    :root {
+      --navy: #071a35;
+      --blue: #1769ff;
+      --cyan: #36d8ee;
+      --gold: #ffc857;
+      --white: #ffffff;
+      --muted: #64748b;
+      --bg: #f2f6fc;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      color: var(--navy);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; }
+
+    .topbar {
+      background: var(--navy);
+      color: white;
+      padding: 12px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .topbar a {
+      color: var(--cyan);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    header {
+      background: white;
+      padding: 18px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      box-shadow: 0 4px 20px #071a3510;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand img {
+      width: 74px;
+      height: 74px;
+      object-fit: contain;
+      border-radius: 14px;
+    }
+
+    .brand h1 {
+      margin: 0;
+      font-size: 22px;
+      line-height: 1.2;
+    }
+
+    .brand p {
+      margin: 5px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .tiktok {
+      display: inline-block;
+      background: #000;
+      color: white;
+      padding: 11px 17px;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .hero {
+      background:
+        linear-gradient(105deg, rgba(5, 20, 45, .96),
+        rgba(10, 59, 113, .83)),
+        url("ai.png") center/cover;
+      color: white;
+      padding: 65px 7%;
+      text-align: center;
+    }
+
+    .hero .eyebrow {
+      display: inline-block;
+      color: var(--gold);
+      border: 1px solid #ffc85777;
+      background: #ffc85714;
+      border-radius: 30px;
+      padding: 6px 15px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .hero h2 {
+      max-width: 800px;
+      margin: 20px auto 12px;
+      font-size: clamp(30px, 5vw, 52px);
+      line-height: 1.12;
+    }
+
+    .hero h2 span { color: var(--cyan); }
+
+    .hero p {
+      max-width: 660px;
+      margin: 0 auto;
+      color: #e0eaff;
+      font-size: 17px;
+    }
+
+    .container {
+      max-width: 1050px;
+      margin: -25px auto 50px;
+      padding: 0 18px;
+      position: relative;
+    }
+
+    .card {
+      background: white;
+      border-radius: 22px;
+      padding: clamp(22px, 4vw, 42px);
+      box-shadow: 0 18px 60px #071a3510;
+      margin-bottom: 24px;
+    }
+
+    .section-title {
+      font-size: 23px;
+      margin: 0 0 5px;
+    }
+
+    .section-description {
+      margin: 0 0 24px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .fields {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 19px;
+    }
+
+    .field { min-width: 0; }
+    .full { grid-column: 1 / -1; }
+
+    label {
+      display: block;
+      font-size: 13px;
+      font-weight: 750;
+      margin-bottom: 7px;
+    }
+
+    .required { color: #e63946; }
+
+    input, select, textarea {
+      width: 100%;
+      border: 1px solid #d9e2ef;
+      border-radius: 11px;
+      padding: 13px 14px;
+      background: #fbfdff;
+      font: inherit;
+      font-size: 14px;
+      color: var(--navy);
+      outline: none;
+      transition: border-color .2s, box-shadow .2s;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px #1769ff17;
+    }
+
+    input[type="file"] {
+      padding: 12px;
+      background: white;
+    }
+
+    .hint {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 6px;
+    }
+
+    .payment-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .payment-option {
+      border: 1px solid #dbe6f5;
+      background: #f8fbff;
+      border-radius: 15px;
+      padding: 21px;
+      overflow-wrap: anywhere;
+    }
+
+    .payment-option h4 {
+      margin: 0 0 10px;
+      font-size: 17px;
+    }
+
+    .payment-option p {
+      margin: 7px 0;
+      font-size: 14px;
+    }
+
+    .payment-option strong { color: #104db4; }
+
+    .amount {
+      background: #eaf3ff;
+      border: 1px solid #c8dcff;
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .amount small {
+      display: block;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .amount strong {
+      display: block;
+      font-size: 35px;
+      color: var(--blue);
+    }
+
+    .notice {
+      background: #fff8e9;
+      border-left: 4px solid var(--gold);
+      padding: 13px 15px;
+      border-radius: 8px;
+      font-size: 13px;
+      margin-top: 20px;
+    }
+
+    .checkline {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .checkline input {
+      width: 17px;
+      height: 17px;
+      margin-top: 4px;
+      flex-shrink: 0;
+    }
+
+    .submit-btn {
+      display: block;
+      width: 100%;
+      border: none;
+      border-radius: 12px;
+      background: linear-gradient(100deg, #1769ff, #0751cb);
+      color: white;
+      font-size: 16px;
+      font-weight: 800;
+      padding: 17px;
+      cursor: pointer;
+      margin-top: 22px;
+      box-shadow: 0 8px 22px #1769ff30;
+    }
+
+    .submit-btn:hover { filter: brightness(1.08); }
+
+    .contact-card {
+      text-align: center;
+      background: var(--navy);
+      color: white;
+    }
+
+    .contact-card h3 { margin-top: 0; }
+
+    .contact-card p { color: #d5e3f9; }
+
+    .contact-card a {
+      color: var(--cyan);
+      text-decoration: none;
+      font-weight: 750;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      padding: 25px 15px;
+      font-size: 12px;
+    }
+
+    @media (max-width: 650px) {
+      header { align-items: flex-start; flex-direction: column; }
+      .brand img { width: 60px; height: 60px; }
+      .brand h1 { font-size: 18px; }
+      .fields, .payment-grid { grid-template-columns: 1fr; }
+      .hero { padding: 52px 20px; }
+      .hero p { font-size: 15px; }
+      .container { padding: 0 12px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <span>🤖 Inspiring Ethiopia's Next Generation of Innovators</span>
+    <a href="https://vt.tiktok.com/ZSgedqDW7/"
+       target="_blank" rel="noopener noreferrer">
+      ▶ Visit our TikTok
+    </a>
+  </div>
+
+  <header>
+    <div class="brand">
+      <img src="logo.jpg" alt="Ethio Robo Robotics logo">
+      <div>
+        <h1>Ethio Robo Robotics</h1>
+        <p>Robotics · Technology · Innovation</p>
+      </div>
+    </div>
+
+    <a class="tiktok"
+       href="https://vt.tiktok.com/ZSgedqDW7/"
+       target="_blank" rel="noopener noreferrer">
+      🎵 Follow us on TikTok
+    </a>
+  </header>
+
+  <section class="hero">
+    <span class="eyebrow">Learn · Build · Innovate</span>
+    <h2>Build the Future.<br><span>Start with Robotics.</span></h2>
+    <p>
+      Take your first step into robotics, technology and innovation.
+      Complete your registration and follow the payment instructions below.
+    </p>
+  </section>
+
+  <main class="container">
+
+    <section class="card">
+      <h2 class="section-title">🚀 Student Registration</h2>
+      <p class="section-description">
+        Fill in your information carefully. Fields marked with *
+        are required.
+      </p>
+
+      <form action="https://formsubmit.co/ethiorobo@gmail.com"
+            method="POST"
+            enctype="multipart/form-data">
+
+        <input type="hidden" name="_subject"
+               value="New Ethio Robo Robotics Registration">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="true">
+
+        <div class="fields">
+          <div class="field full">
+            <label for="fullname">Student's Full Name <span class="required">*</span></label>
+            <input id="fullname" name="Student Full Name"
+                   type="text" autocomplete="name" required
+                   placeholder="Enter full name">
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone Number <span class="required">*</span></label>
+            <input id="phone" name="Student Phone"
+                   type="tel" required
+                   placeholder="e.g. 09XXXXXXXX">
+          </div>
+
+          <div class="field">
+            <label for="email">Email Address</label>
+            <input id="email" name="Student Email"
+                   type="email" autocomplete="email"
+                   placeholder="student@example.com">
+          </div>
+
+          <div class="field">
+            <label for="city">City / Region <span class="required">*</span></label>
+            <input id="city" name="City or Region"
+                   type="text" required placeholder="Enter city or region">
+          </div>
+
+          <div class="field">
+            <label for="level">Student Level <span class="required">*</span></label>
+            <select id="level" name="Student Level" required>
+              <option value="">Choose student level</option>
+              <option>Elementary School</option>
+              <option>High School</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="height:30px"></div>
+
+        <h2 class="section-title">💳 Payment Information</h2>
+        <p class="section-description">
+          Select your preferred payment method and complete the transfer.
+        </p>
+
+        <div class="amount">
+          <small>Registration Fee</small>
+          <strong>5,000 ETB</strong>
+        </div>
+
+        <div class="payment-grid">
+          <div class="payment-option">
+            <h4>📱 Telebirr</h4>
+            <p>Account name: <strong>Ethio Robo Robotics (Atsede Bahita)</strong></p>
+            <p>Phone / Account: <strong>0909790386</strong></p>
+          </div>
+
+          <div class="payment-option">
+            <h4>🏦 Commercial Bank of Ethiopia</h4>
+            <p>Account name: <strong>Ethio Robo Robotics (Atsede Bahita)</strong></p>
+            <p>Account number: <strong>1000479121684</strong></p>
+          </div>
+        </div>
+
+        <div class="fields" style="margin-top:22px">
+          <div class="field">
+            <label for="method">Payment Method <span class="required">*</span></label>
+            <select id="method" name="Payment Method" required>
+              <option value="">Select payment method</option>
+              <option>Telebirr</option>
+              <option>Commercial Bank of Ethiopia (CBE)</option>
+              <option>Cash</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="reference">Transaction Reference</label>
+            <input id="reference" name="Transaction Reference"
+                   type="text" placeholder="Enter transaction/reference number">
+          </div>
+
+          <div class="field full">
+            <label for="screenshot">
+              Attach Payment Screenshot <span class="required">*</span>
+            </label>
+            <input id="screenshot" name="_attachment"
+                   type="file" accept="image/jpeg,image/png,image/webp"
+                   required>
+            <span class="hint">
+              Upload a clear JPG, PNG or WebP screenshot showing your payment.
+            </span>
+          </div>
+
+          <div class="field full">
+            <label for="message">Additional Information (Optional)</label>
+            <textarea id="message" name="Additional Information"
+                      rows="3"
+                      placeholder="Anything else we should know?"></textarea>
+          </div>
+
+          <div class="field full">
+            <label class="checkline">
+              <input type="checkbox" name="Information Confirmation"
+                     value="Confirmed" required>
+              <span>I confirm that the registration information is accurate
+                and that the payment details I submit are correct.</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="notice">
+          <strong>Important:</strong> Please verify the recipient and account
+          number before sending money. Your registration will be reviewed
+          after the information and payment are verified.
+        </div>
+
+        <button class="submit-btn" type="submit">
+          Submit Registration & Payment Proof →
+        </button>
+      </form>
+    </section>
+
+    <section class="card contact-card">
+      <h3>Need Help? We're Here for You.</h3>
+      <p>
+        For further inquiries, please contact our team.
+      </p>
+      <p>
+        📞 <a href="tel:0911675401">0911675401</a>
+      </p>
+      <p>
+        ✉️ <a href="mailto:ethiorobo@gmail.com">ethiorobo@gmail.com</a>
+      </p>
+      <p>
+        🎵 <a href="https://vt.tiktok.com/ZSgedqDW7/"
+              target="_blank" rel="noopener noreferrer">
+          Visit Ethio Robo Robotics on TikTok
+        </a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Ethio Robo Robotics.
+    Empowering young minds through technology and innovation.
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+</body>
+</html>
