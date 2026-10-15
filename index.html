@@ -448,6 +448,7 @@
       font-size: 16px;
     }
 
+    /* This is intentionally a non-clickable div, not an anchor or button. */
     .global-final-button {
       display: inline-flex;
       align-items: center;
@@ -462,12 +463,8 @@
       font-size: 15px;
       font-weight: 900;
       box-shadow: 0 12px 35px rgba(34, 211, 238, .22);
-      transition: transform .25s ease, box-shadow .25s ease;
-    }
-
-    .global-final-button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 16px 40px rgba(34, 211, 238, .35);
+      cursor: default;
+      user-select: none;
     }
 
     .global-final-note {
@@ -1204,14 +1201,10 @@
           </div>
         </div>
 
-        <a
-          class="global-final-button"
-          href="https://enjoyailobal.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <!-- Non-clickable display element: no href, no click handler -->
+        <div class="global-final-button" aria-label="Enjoy AI Global information">
           Explore Enjoy AI Global <span aria-hidden="true">↗</span>
-        </a>
+        </div>
 
         <p class="global-final-note">
           Visit the event website for official details and participation information.
@@ -1686,9 +1679,7 @@
         return;
       }
 
-      // Do not prevent the default submission.
-      // The browser submits the multipart form to FormSubmit,
-      // including the payment screenshot attachment.
+      // Allow the normal multipart form submission to FormSubmit.
       formStatus.textContent = "Submitting your registration...";
     });
   </script>
