@@ -164,6 +164,7 @@
       background: #1d4ed8;
     }
 
+    /* HERO BACKGROUND: CLEAR IMAGE WITH READABLE TEXT */
     .hero {
       position: relative;
       display: flex;
@@ -171,7 +172,7 @@
       min-height: 650px;
       isolation: isolate;
       overflow: hidden;
-      background: var(--navy);
+      background: #07152e;
       color: white;
     }
 
@@ -183,7 +184,10 @@
       background-image: url("rob1.jpg");
       background-position: center;
       background-size: cover;
-      opacity: 0.43;
+      background-repeat: no-repeat;
+      opacity: 1;
+      filter: none;
+      transform: scale(1.01);
     }
 
     .hero::after {
@@ -191,11 +195,12 @@
       position: absolute;
       inset: 0;
       z-index: -1;
-      background:
-        linear-gradient(90deg, rgba(4, 15, 36, 0.98) 0%,
-        rgba(4, 15, 36, 0.87) 45%,
-        rgba(4, 15, 36, 0.42) 100%),
-        linear-gradient(0deg, rgba(4, 15, 36, 0.55), transparent);
+      background: linear-gradient(
+        90deg,
+        rgba(4, 15, 36, 0.88) 0%,
+        rgba(4, 15, 36, 0.68) 42%,
+        rgba(4, 15, 36, 0.18) 100%
+      );
     }
 
     .hero-content {
@@ -224,6 +229,7 @@
       font-size: clamp(38px, 6vw, 72px);
       line-height: 1.04;
       letter-spacing: -2.5px;
+      text-shadow: 0 3px 18px rgba(0, 0, 0, 0.35);
     }
 
     .hero h1 span {
@@ -235,6 +241,7 @@
       margin-top: 24px;
       color: #e0e9f8;
       font-size: clamp(16px, 2vw, 19px);
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     }
 
     .hero-actions {
@@ -717,13 +724,14 @@
 
       .hero::before {
         background-position: 58% center;
+        background-size: cover;
       }
 
       .hero::after {
         background: linear-gradient(
           90deg,
-          rgba(4, 15, 36, 0.96),
-          rgba(4, 15, 36, 0.76)
+          rgba(4, 15, 36, 0.84) 0%,
+          rgba(4, 15, 36, 0.58) 100%
         );
       }
 
@@ -1011,7 +1019,6 @@
         </div>
 
         <div class="registration-layout">
-          <!-- Payment details -->
           <aside class="payment-panel" id="payment">
             <h3>Registration Payment</h3>
 
@@ -1050,7 +1057,6 @@
             </div>
           </aside>
 
-          <!-- Registration form -->
           <form
             class="registration-form"
             id="registrationForm"
@@ -1254,7 +1260,9 @@
         <strong>Ethio Robo Robotics</strong> · AI, Robotics &amp; Innovation
       </p>
       <p>Contact: 0911675401</p>
-      <p>© <span id="currentYear"></span> Ethio Robo Robotics. All rights reserved.</p>
+      <p>
+        © <span id="currentYear"></span> Ethio Robo Robotics. All rights reserved.
+      </p>
     </div>
   </footer>
 
