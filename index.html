@@ -4,32 +4,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Ethio Robo Robotics | AI & Robotics China Opportunity</title>
-  <meta
-    name="description"
-    content="Register for the Ethio Robo Robotics AI and Robotics China opportunity."
-  >
+  <meta name="description" content="Ethio Robo Robotics — Explore artificial intelligence and robotics opportunities and the Enjoy AI Global Final in China, December 2026.">
   <meta name="theme-color" content="#07152e">
+  <title>Ethio Robo Robotics | AI &amp; Robotics China Opportunity</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --navy: #07152e;
-      --navy-light: #10264a;
+      --navy-light: #102b59;
       --blue: #2563eb;
       --cyan: #22d3ee;
       --orange: #ff9f43;
+      --text: #172033;
+      --muted: #667085;
+      --light: #f5f8ff;
       --white: #ffffff;
-      --muted: #64748b;
-      --light: #f4f8ff;
-      --border: #e2e8f0;
-      --shadow: 0 20px 55px rgba(7, 21, 46, 0.12);
+      --border: #e5eaf3;
+      --shadow: 0 18px 55px rgba(15, 35, 75, 0.10);
+      --radius: 22px;
     }
 
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     html {
@@ -38,9 +40,9 @@
     }
 
     body {
-      font-family: Inter, "Segoe UI", Arial, sans-serif;
-      color: var(--navy);
-      background: var(--white);
+      font-family: "Inter", Arial, sans-serif;
+      color: var(--text);
+      background: #ffffff;
       line-height: 1.6;
       overflow-x: hidden;
     }
@@ -62,34 +64,114 @@
       font: inherit;
     }
 
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
     .container {
       width: min(1160px, calc(100% - 40px));
-      margin-inline: auto;
+      margin: 0 auto;
     }
 
-    .announcement {
-      padding: 9px 15px;
-      background: linear-gradient(90deg, #083b82, #1265c7);
-      color: white;
+    .section {
+      padding: 85px 0;
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin: 0 auto 42px;
       text-align: center;
-      font-size: 13px;
-      font-weight: 700;
     }
 
-    .announcement span {
-      color: #ffe08a;
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 12px;
+      color: #2563eb;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
     }
 
+    .section-heading h2 {
+      margin-bottom: 14px;
+      color: var(--navy);
+      font-size: clamp(29px, 4vw, 43px);
+      line-height: 1.2;
+      letter-spacing: -1px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .btn {
+      display: inline-flex;
+      min-height: 49px;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 13px 22px;
+      border: 1px solid transparent;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 800;
+      text-align: center;
+      cursor: pointer;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      color: #ffffff;
+      background: linear-gradient(135deg, #2563eb, #0891b2);
+      box-shadow: 0 10px 25px rgba(37, 99, 235, .22);
+    }
+
+    .btn-outline {
+      color: var(--navy);
+      background: #ffffff;
+      border-color: #d7e0ef;
+    }
+
+    .btn-light {
+      color: var(--navy);
+      background: #ffffff;
+    }
+
+    /* Announcement bar */
+    .announcement-bar {
+      position: relative;
+      z-index: 1002;
+      padding: 9px 15px;
+      color: #ffffff;
+      background: linear-gradient(90deg, #082044, #1456a5, #082044);
+      text-align: center;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .3px;
+    }
+
+    .announcement-bar strong {
+      color: #67e8f9;
+    }
+
+    /* Header */
     .site-header {
       position: sticky;
       top: 0;
-      z-index: 100;
-      background: rgba(255, 255, 255, 0.96);
+      z-index: 1001;
+      background: rgba(255, 255, 255, .96);
+      border-bottom: 1px solid rgba(229, 234, 243, .9);
       backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(226, 232, 240, 0.9);
     }
 
-    .nav {
+    .nav-wrap {
       min-height: 78px;
       display: flex;
       align-items: center;
@@ -101,234 +183,329 @@
       display: flex;
       align-items: center;
       gap: 12px;
-      min-width: 0;
+      flex-shrink: 0;
     }
 
-    .brand img {
-      width: 56px;
-      height: 56px;
+    .brand-logo {
+      width: 49px;
+      height: 49px;
       object-fit: contain;
       border-radius: 12px;
     }
 
-    .brand-name {
-      font-size: 18px;
-      line-height: 1.2;
+    .brand-text strong {
+      display: block;
+      color: var(--navy);
+      font-size: 15px;
       font-weight: 900;
-      letter-spacing: -0.4px;
+      letter-spacing: .7px;
+      line-height: 1.3;
     }
 
-    .brand-name span {
+    .brand-text span {
       display: block;
-      margin-top: 4px;
-      color: var(--blue);
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 1.6px;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .8px;
       text-transform: uppercase;
     }
 
-    .nav-links {
+    .main-nav {
       display: flex;
       align-items: center;
-      gap: 27px;
-      font-size: 14px;
+      gap: 26px;
+    }
+
+    .main-nav a {
+      color: #344054;
+      font-size: 13px;
       font-weight: 700;
+      transition: color .2s ease;
     }
 
-    .nav-links a:not(.nav-cta):hover {
-      color: var(--blue);
+    .main-nav a:hover {
+      color: #2563eb;
     }
 
-    .nav-cta,
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 13px 21px;
-      border: none;
-      border-radius: 12px;
+    .main-nav .nav-cta {
+      padding: 11px 16px;
+      border-radius: 10px;
+      color: #ffffff;
       background: var(--blue);
-      color: white;
-      font-weight: 800;
-      text-align: center;
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 43px;
+      height: 43px;
+      border: 1px solid var(--border);
+      border-radius: 11px;
+      background: #ffffff;
+      color: var(--navy);
+      font-size: 24px;
       cursor: pointer;
-      transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
     }
 
-    .nav-cta:hover,
-    .button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 24px rgba(37, 99, 235, 0.24);
-      background: #1d4ed8;
-    }
-
-    /* HERO BACKGROUND: rob3.png */
+    /* Hero */
     .hero {
       position: relative;
-      display: flex;
-      align-items: center;
-      min-height: 650px;
       isolation: isolate;
+      display: flex;
+      min-height: 610px;
+      align-items: center;
       overflow: hidden;
-      background: #07152e;
-      color: white;
+      color: #ffffff;
+      background: var(--navy);
     }
 
     .hero::before {
-      content: "";
       position: absolute;
       inset: 0;
       z-index: -2;
+      content: "";
       background-image: url("rob3.png");
-      background-position: center;
       background-size: cover;
+      background-position: center;
       background-repeat: no-repeat;
-      opacity: 1;
-      filter: none;
-      transform: scale(1.01);
+      transform: scale(1.02);
     }
 
     .hero::after {
-      content: "";
       position: absolute;
       inset: 0;
       z-index: -1;
-      background: linear-gradient(
-        90deg,
-        rgba(4, 15, 36, 0.88) 0%,
-        rgba(4, 15, 36, 0.68) 42%,
-        rgba(4, 15, 36, 0.18) 100%
-      );
+      content: "";
+      background:
+        linear-gradient(90deg,
+          rgba(4, 14, 35, .96) 0%,
+          rgba(4, 14, 35, .86) 43%,
+          rgba(4, 14, 35, .45) 75%,
+          rgba(4, 14, 35, .30) 100%);
     }
 
     .hero-content {
-      width: min(780px, 100%);
-      padding-block: 90px;
+      width: min(760px, 100%);
+      padding-top: 85px;
+      padding-bottom: 85px;
     }
 
-    .eyebrow {
+    .hero-badge {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 8px 13px;
-      border: 1px solid rgba(34, 211, 238, 0.42);
+      padding: 9px 14px;
+      margin-bottom: 24px;
+      border: 1px solid rgba(103, 232, 249, .38);
       border-radius: 999px;
-      background: rgba(34, 211, 238, 0.1);
-      color: #9ff3ff;
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 1.1px;
+      color: #a5f3fc;
+      background: rgba(34, 211, 238, .09);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 1.2px;
       text-transform: uppercase;
     }
 
     .hero h1 {
-      margin-top: 24px;
-      max-width: 800px;
-      font-size: clamp(38px, 6vw, 72px);
+      max-width: 760px;
+      margin-bottom: 22px;
+      font-size: clamp(39px, 6vw, 70px);
+      font-weight: 900;
       line-height: 1.04;
-      letter-spacing: -2.5px;
-      text-shadow: 0 3px 18px rgba(0, 0, 0, 0.35);
+      letter-spacing: -2.6px;
     }
 
     .hero h1 span {
-      color: var(--cyan);
+      color: #67e8f9;
     }
 
-    .hero p {
-      max-width: 650px;
-      margin-top: 24px;
-      color: #e0e9f8;
-      font-size: clamp(16px, 2vw, 19px);
-      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    .hero-description {
+      max-width: 620px;
+      margin-bottom: 30px;
+      color: #e2e8f0;
+      font-size: clamp(15px, 2vw, 18px);
+      line-height: 1.85;
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 13px;
-      margin-top: 32px;
     }
 
-    .button-light {
-      background: white;
-      color: var(--navy);
+    .hero .btn-outline {
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, .35);
+      background: rgba(255, 255, 255, .08);
     }
 
-    .button-light:hover {
-      background: #eaf2ff;
+    .hero-footnote {
+      margin-top: 24px;
+      color: #cbd5e1;
+      font-size: 12px;
     }
 
-    .hero-note {
-      margin-top: 22px;
-      color: #dbeafe;
-      font-size: 13px;
-    }
-
-    .hero-note strong {
-      color: #ffe08a;
-    }
-
-    .section {
-      padding-block: 85px;
-    }
-
-    .section-light {
-      background: var(--light);
-    }
-
-    .section-heading {
-      max-width: 740px;
-      margin: 0 auto 42px;
+    /* Enjoy AI Global Final featured announcement */
+    .global-final-section {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      padding: 78px 20px;
+      color: #ffffff;
       text-align: center;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(34, 211, 238, .22), transparent 32%),
+        radial-gradient(circle at 85% 80%, rgba(255, 159, 67, .20), transparent 30%),
+        linear-gradient(135deg, #061329 0%, #102b59 55%, #07152e 100%);
     }
 
-    .section-kicker {
-      color: var(--blue);
+    .global-final-section::before {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      content: "";
+      opacity: .16;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, .08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, .08) 1px, transparent 1px);
+      background-size: 38px 38px;
+      mask-image: linear-gradient(to bottom, black, transparent);
+    }
+
+    .global-final-content {
+      width: min(900px, 100%);
+      margin: auto;
+    }
+
+    .global-final-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 9px 16px;
+      margin-bottom: 22px;
+      border: 1px solid rgba(103, 232, 249, .45);
+      border-radius: 999px;
+      color: #a5f3fc;
+      background: rgba(34, 211, 238, .10);
       font-size: 12px;
       font-weight: 900;
-      letter-spacing: 2px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
     }
 
-    .section-heading h2 {
-      margin-top: 10px;
-      font-size: clamp(29px, 4vw, 44px);
-      line-height: 1.15;
-      letter-spacing: -1.2px;
+    .global-final-content h2 {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: clamp(32px, 5vw, 56px);
+      line-height: 1.12;
+      letter-spacing: -1.6px;
     }
 
-    .section-heading p {
-      margin-top: 15px;
-      color: var(--muted);
+    .global-final-content h2 span {
+      display: block;
+      margin-top: 8px;
+      color: #67e8f9;
+    }
+
+    .global-final-description {
+      max-width: 680px;
+      margin: 22px auto 28px;
+      color: #dbeafe;
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .global-final-details {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 30px;
+    }
+
+    .global-final-detail {
+      min-width: 175px;
+      padding: 16px 22px;
+      border: 1px solid rgba(255, 255, 255, .16);
+      border-radius: 15px;
+      background: rgba(255, 255, 255, .07);
+      backdrop-filter: blur(8px);
+    }
+
+    .global-final-detail small {
+      display: block;
+      margin-bottom: 4px;
+      color: #a5b4fc;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .global-final-detail strong {
+      color: #ffffff;
       font-size: 16px;
     }
 
-    .gallery {
+    .global-final-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 53px;
+      padding: 16px 27px;
+      border: 1px solid #a5f3fc;
+      border-radius: 13px;
+      color: #ffffff;
+      background: linear-gradient(135deg, #0891b2, #2563eb);
+      font-size: 15px;
+      font-weight: 900;
+      box-shadow: 0 12px 35px rgba(34, 211, 238, .22);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .global-final-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 40px rgba(34, 211, 238, .35);
+    }
+
+    .global-final-note {
+      margin-top: 18px;
+      color: #aebdd5;
+      font-size: 12px;
+    }
+
+    /* Gallery */
+    .gallery-section {
+      background: var(--light);
+    }
+
+    .gallery-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 24px;
-      margin-top: -4px;
+      gap: 25px;
     }
 
     .gallery-card {
       position: relative;
+      min-height: 320px;
       overflow: hidden;
-      border-radius: 22px;
+      border-radius: var(--radius);
       background: #dbeafe;
       box-shadow: var(--shadow);
     }
 
     .gallery-card img {
       width: 100%;
-      height: 340px;
+      height: 100%;
+      min-height: 320px;
       object-fit: cover;
-      transition: transform 0.5s;
+      transition: transform .5s ease;
     }
 
     .gallery-card:hover img {
-      transform: scale(1.035);
+      transform: scale(1.04);
     }
 
     .gallery-caption {
@@ -336,127 +513,150 @@
       right: 0;
       bottom: 0;
       left: 0;
-      padding: 35px 22px 20px;
-      color: white;
-      background: linear-gradient(transparent, rgba(4, 15, 36, 0.9));
-      font-size: 18px;
-      font-weight: 800;
+      padding: 28px 24px 22px;
+      color: #ffffff;
+      background: linear-gradient(transparent, rgba(4, 14, 35, .90));
     }
 
-    .highlights {
+    .gallery-caption h3 {
+      margin-bottom: 5px;
+      font-size: 21px;
+    }
+
+    .gallery-caption p {
+      color: #e2e8f0;
+      font-size: 13px;
+    }
+
+    /* Highlights */
+    .highlights-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      gap: 22px;
     }
 
     .highlight-card {
-      padding: 27px;
+      padding: 29px 25px;
       border: 1px solid var(--border);
       border-radius: 18px;
-      background: white;
-      box-shadow: 0 8px 25px rgba(7, 21, 46, 0.04);
+      background: #ffffff;
+      box-shadow: 0 10px 35px rgba(15, 35, 75, .045);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .highlight-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
     }
 
     .highlight-icon {
       display: grid;
+      width: 55px;
+      height: 55px;
       place-items: center;
-      width: 52px;
-      height: 52px;
-      margin-bottom: 18px;
-      border-radius: 15px;
-      background: #e8f2ff;
-      font-size: 25px;
+      margin-bottom: 20px;
+      border-radius: 16px;
+      color: #1d4ed8;
+      background: #eaf2ff;
+      font-size: 26px;
     }
 
     .highlight-card h3 {
-      margin-bottom: 8px;
+      margin-bottom: 10px;
+      color: var(--navy);
       font-size: 19px;
     }
 
     .highlight-card p {
       color: var(--muted);
       font-size: 14px;
+      line-height: 1.8;
     }
 
-    .opportunity-grid {
+    /* How to participate */
+    .steps-section {
+      background: var(--light);
+    }
+
+    .steps-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 22px;
     }
 
-    .opportunity-card {
-      padding: 28px;
+    .step-card {
+      padding: 28px 25px;
       border: 1px solid var(--border);
-      border-radius: 20px;
-      background: white;
-      transition: transform 0.2s, box-shadow 0.2s;
+      border-radius: 18px;
+      background: #ffffff;
     }
 
-    .opportunity-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow);
-    }
-
-    .opportunity-number {
-      color: var(--blue);
-      font-size: 13px;
+    .step-number {
+      display: grid;
+      width: 45px;
+      height: 45px;
+      place-items: center;
+      margin-bottom: 20px;
+      border-radius: 14px;
+      color: #ffffff;
+      background: linear-gradient(135deg, #2563eb, #0891b2);
+      font-size: 18px;
       font-weight: 900;
-      letter-spacing: 1.5px;
     }
 
-    .opportunity-card h3 {
-      margin-top: 13px;
-      margin-bottom: 10px;
-      font-size: 21px;
+    .step-card h3 {
+      margin-bottom: 9px;
+      color: var(--navy);
+      font-size: 18px;
     }
 
-    .opportunity-card p {
+    .step-card p {
       color: var(--muted);
       font-size: 14px;
+      line-height: 1.8;
     }
 
-    .register-section {
-      background:
-        radial-gradient(circle at top left, rgba(37, 99, 235, 0.08), transparent 35%),
-        var(--light);
+    /* Registration section */
+    .registration-section {
+      background: #ffffff;
     }
 
-    .registration-layout {
+    .registration-grid {
       display: grid;
-      grid-template-columns: 0.82fr 1.18fr;
+      grid-template-columns: .88fr 1.12fr;
       align-items: start;
-      gap: 28px;
+      gap: 30px;
     }
 
     .payment-panel,
-    .registration-form {
-      min-width: 0;
+    .form-panel {
       padding: 30px;
       border: 1px solid var(--border);
-      border-radius: 22px;
-      background: white;
+      border-radius: var(--radius);
+      background: #ffffff;
       box-shadow: var(--shadow);
     }
 
     .payment-panel h3,
-    .registration-form h3 {
-      font-size: 25px;
-      line-height: 1.25;
+    .form-panel h3 {
+      margin-bottom: 10px;
+      color: var(--navy);
+      font-size: 24px;
     }
 
     .panel-intro {
-      margin-top: 10px;
-      margin-bottom: 24px;
+      margin-bottom: 22px;
       color: var(--muted);
       font-size: 14px;
+      line-height: 1.8;
     }
 
     .fee-label {
-      padding: 20px;
-      margin-bottom: 18px;
-      border: 1px solid #bfdbfe;
+      padding: 22px;
+      margin-bottom: 20px;
+      border: 1px solid #c7e7ff;
       border-radius: 16px;
-      background: linear-gradient(135deg, #eff6ff, #f0fdff);
+      background: linear-gradient(135deg, #eff6ff, #ecfeff);
       text-align: center;
     }
 
@@ -464,64 +664,64 @@
       display: block;
       color: #475569;
       font-size: 12px;
+      font-weight: 700;
     }
 
     .fee-amount {
-      margin: 3px 0;
-      color: #1748ad;
-      font-size: 36px;
-      line-height: 1.2;
+      margin: 4px 0;
+      color: #1d4ed8;
+      font-size: 38px;
       font-weight: 900;
       letter-spacing: -1px;
     }
 
     .account {
-      padding: 18px;
-      margin-top: 14px;
+      padding: 17px 18px;
+      margin-bottom: 13px;
       border: 1px solid var(--border);
       border-radius: 14px;
-      overflow-wrap: anywhere;
+      background: #ffffff;
     }
 
-    .account > small {
+    .account > small:first-child {
       display: block;
+      margin-bottom: 5px;
       color: var(--muted);
       font-size: 12px;
+      font-weight: 800;
     }
 
     .account strong {
       display: block;
-      margin: 4px 0;
+      margin-bottom: 4px;
       color: var(--navy);
-      font-size: 23px;
-      letter-spacing: 0.2px;
+      font-size: 20px;
+      overflow-wrap: anywhere;
     }
 
     .account .account-name {
-      margin-top: 3px;
-      color: #334155;
-      font-size: 13px;
-      font-weight: 700;
+      display: block;
+      color: #475467;
+      font-size: 12px;
+      overflow-wrap: anywhere;
     }
 
     .payment-warning {
-      padding: 14px;
+      padding: 15px;
       margin-top: 18px;
       border: 1px solid #fed7aa;
       border-radius: 12px;
+      color: #92400e;
       background: #fff7ed;
-      color: #9a3412;
-      font-size: 13px;
+      font-size: 12px;
+      line-height: 1.8;
     }
 
-    .registration-form h3 {
-      margin-bottom: 7px;
-    }
-
-    .form-intro {
+    .form-panel > p {
       margin-bottom: 24px;
       color: var(--muted);
       font-size: 14px;
+      line-height: 1.8;
     }
 
     .form-grid {
@@ -541,7 +741,8 @@
 
     .form-group label {
       display: block;
-      margin-bottom: 7px;
+      margin-bottom: 8px;
+      color: #344054;
       font-size: 13px;
       font-weight: 800;
     }
@@ -550,201 +751,259 @@
       color: #dc2626;
     }
 
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
+    .form-control {
       display: block;
       width: 100%;
       min-height: 48px;
       padding: 12px 13px;
-      border: 1px solid #cbd5e1;
-      border-radius: 11px;
+      border: 1px solid #d0d5dd;
+      border-radius: 10px;
       outline: none;
-      background: #fff;
-      color: var(--navy);
-      transition: border-color 0.2s, box-shadow 0.2s;
+      color: var(--text);
+      background: #ffffff;
+      font-size: 14px;
+      transition: border-color .2s ease, box-shadow .2s ease;
     }
 
-    .form-group textarea {
-      min-height: 110px;
+    .form-control:focus {
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, .12);
+    }
+
+    textarea.form-control {
+      min-height: 115px;
       resize: vertical;
     }
 
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      border-color: var(--blue);
-      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+    input[type="file"].form-control {
+      padding: 10px;
+      background: #f8fafc;
     }
 
-    .form-help {
+    .field-help {
       display: block;
       margin-top: 7px;
       color: var(--muted);
-      font-size: 12px;
+      font-size: 11px;
+      line-height: 1.6;
     }
 
-    .consent {
+    .consent-row {
       display: flex;
       align-items: flex-start;
       gap: 10px;
       margin: 4px 0 22px;
-      color: #475569;
-      font-size: 13px;
+      color: #475467;
+      font-size: 12px;
+      line-height: 1.7;
     }
 
-    .consent input {
+    .consent-row input {
       width: 17px;
       height: 17px;
-      margin-top: 3px;
       flex: 0 0 auto;
-      accent-color: var(--blue);
+      margin-top: 3px;
+      accent-color: #2563eb;
     }
 
     .submit-button {
       width: 100%;
-      min-height: 52px;
-      font-size: 15px;
+      border: 0;
     }
 
-    .form-disclaimer {
-      margin-top: 13px;
-      color: var(--muted);
-      font-size: 12px;
+    .form-status {
+      margin-top: 12px;
+      color: #b42318;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .privacy-note {
+      margin-top: 15px;
+      color: #667085;
+      font-size: 11px;
+      line-height: 1.7;
       text-align: center;
     }
 
+    /* TikTok section */
     .social-section {
-      padding-block: 62px;
-      background: var(--navy);
-      color: white;
-      text-align: center;
+      padding: 55px 0;
+      color: #ffffff;
+      background: linear-gradient(120deg, #07152e, #12386c);
     }
 
-    .social-section h2 {
-      font-size: clamp(27px, 4vw, 38px);
+    .social-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
     }
 
-    .social-section p {
+    .social-inner h2 {
+      margin-bottom: 8px;
+      font-size: clamp(23px, 3vw, 32px);
+    }
+
+    .social-inner p {
       max-width: 620px;
-      margin: 12px auto 22px;
       color: #cbd5e1;
+      font-size: 14px;
     }
 
-    .social-section .button {
-      background: #111827;
-      border: 1px solid #475569;
-    }
-
+    /* Footer */
     .site-footer {
-      padding: 26px 0;
-      background: #040d1d;
+      padding: 30px 0;
       color: #cbd5e1;
-      text-align: center;
+      background: #040d1d;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .footer-brand {
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    .footer-contact {
+      margin-top: 5px;
+      color: #94a3b8;
       font-size: 12px;
     }
 
-    .site-footer strong {
-      color: white;
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      font-size: 12px;
     }
 
+    .footer-links a:hover {
+      color: #67e8f9;
+    }
+
+    .copyright {
+      margin-top: 20px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, .10);
+      color: #8492a6;
+      font-size: 11px;
+      text-align: center;
+    }
+
+    /* Responsive layout */
     @media (max-width: 900px) {
-      .nav-links {
+      .main-nav {
         gap: 15px;
       }
 
-      .registration-layout {
+      .registration-grid {
         grid-template-columns: 1fr;
       }
 
-      .payment-panel {
-        order: 1;
-      }
-
-      .registration-form {
-        order: 2;
-      }
-
-      .highlights,
-      .opportunity-grid {
+      .highlights-grid,
+      .steps-grid {
         grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero {
+        min-height: 560px;
       }
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 680px) {
       .container {
-        width: min(100% - 28px, 1160px);
+        width: min(100% - 30px, 1160px);
       }
 
-      .announcement {
-        font-size: 11px;
-        padding: 8px 10px;
+      .section {
+        padding: 62px 0;
       }
 
-      .nav {
-        min-height: 68px;
-        gap: 10px;
+      .nav-wrap {
+        min-height: 70px;
       }
 
-      .brand {
-        gap: 8px;
-      }
-
-      .brand img {
+      .brand-logo {
         width: 43px;
         height: 43px;
       }
 
-      .brand-name {
-        font-size: 14px;
+      .brand-text strong {
+        font-size: 13px;
       }
 
-      .brand-name span {
+      .brand-text span {
         font-size: 9px;
-        letter-spacing: 1px;
       }
 
-      .nav-links {
-        gap: 0;
+      .menu-toggle {
+        display: block;
       }
 
-      .nav-links a:not(.nav-cta) {
+      .main-nav {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
         display: none;
+        align-items: stretch;
+        gap: 0;
+        padding: 12px 20px 20px;
+        border-bottom: 1px solid var(--border);
+        background: #ffffff;
+        box-shadow: 0 14px 24px rgba(15, 35, 75, .08);
       }
 
-      .nav-cta {
-        padding: 10px 12px;
-        border-radius: 10px;
-        font-size: 12px;
+      .main-nav.open {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .main-nav a {
+        padding: 13px 5px;
+        border-bottom: 1px solid #f0f2f6;
+      }
+
+      .main-nav .nav-cta {
+        margin-top: 10px;
+        text-align: center;
       }
 
       .hero {
-        min-height: 570px;
+        min-height: 560px;
       }
 
       .hero::before {
         background-position: 58% center;
-        background-size: cover;
       }
 
       .hero::after {
         background: linear-gradient(
           90deg,
-          rgba(4, 15, 36, 0.84) 0%,
-          rgba(4, 15, 36, 0.58) 100%
+          rgba(4, 14, 35, .92) 0%,
+          rgba(4, 14, 35, .77) 65%,
+          rgba(4, 14, 35, .57) 100%
         );
       }
 
       .hero-content {
-        padding-block: 70px;
+        padding-top: 70px;
+        padding-bottom: 70px;
       }
 
       .hero h1 {
-        font-size: clamp(37px, 11vw, 54px);
-        letter-spacing: -1.5px;
+        font-size: clamp(37px, 10vw, 53px);
+        letter-spacing: -1.7px;
       }
 
-      .hero p {
+      .hero-description {
         font-size: 15px;
       }
 
@@ -753,47 +1012,50 @@
         align-items: stretch;
       }
 
-      .section {
-        padding-block: 60px;
+      .hero-actions .btn {
+        width: 100%;
       }
 
-      .section-heading {
-        margin-bottom: 30px;
+      .global-final-section {
+        padding: 55px 16px;
       }
 
-      .gallery {
+      .global-final-content h2 {
+        font-size: clamp(31px, 8vw, 43px);
+        letter-spacing: -.8px;
+      }
+
+      .global-final-description {
+        font-size: 15px;
+      }
+
+      .global-final-details {
+        flex-direction: column;
+      }
+
+      .global-final-detail {
+        width: 100%;
+      }
+
+      .global-final-button {
+        width: 100%;
+        padding: 15px 18px;
+      }
+
+      .gallery-grid,
+      .highlights-grid,
+      .steps-grid {
         grid-template-columns: 1fr;
-        gap: 16px;
       }
 
+      .gallery-card,
       .gallery-card img {
-        height: 250px;
-      }
-
-      .highlights,
-      .opportunity-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-      }
-
-      .highlight-card,
-      .opportunity-card {
-        padding: 22px;
+        min-height: 260px;
       }
 
       .payment-panel,
-      .registration-form {
-        padding: 21px 17px;
-        border-radius: 17px;
-      }
-
-      .payment-panel h3,
-      .registration-form h3 {
-        font-size: 23px;
-      }
-
-      .account strong {
-        font-size: 21px;
+      .form-panel {
+        padding: 22px 18px;
       }
 
       .form-grid {
@@ -805,53 +1067,79 @@
         grid-column: auto;
       }
 
-      .social-section {
-        padding-block: 50px;
+      .social-inner,
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .social-inner .btn {
+        width: 100%;
+      }
+
+      .footer-links {
+        gap: 14px;
       }
     }
 
     @media (max-width: 360px) {
-      .container {
-        width: calc(100% - 22px);
-      }
-
-      .brand-name {
-        font-size: 12px;
-      }
-
-      .brand-name span {
-        font-size: 8px;
-      }
-
-      .nav-cta {
-        padding: 9px;
+      .announcement-bar {
         font-size: 11px;
       }
 
+      .brand {
+        gap: 8px;
+      }
+
+      .brand-logo {
+        width: 37px;
+        height: 37px;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
       .fee-amount {
-        font-size: 31px;
+        font-size: 32px;
+      }
+
+      .payment-panel,
+      .form-panel {
+        padding: 18px 14px;
       }
     }
   </style>
 </head>
 
 <body>
-  <div class="announcement">
-    Registration is open — <span>Registration fee: 5,000 ETB</span>
+  <div class="announcement-bar">
+    <strong>Registration Fee: 5,000 ETB</strong>
+    &nbsp; | &nbsp; AI &amp; Robotics International Opportunity
   </div>
 
   <header class="site-header">
-    <div class="container nav">
+    <div class="container nav-wrap">
       <a class="brand" href="#home" aria-label="Ethio Robo Robotics home">
-        <img src="logo.jpg" alt="Ethio Robo Robotics logo">
-        <div class="brand-name">
-          ETHIO ROBO
+        <img class="brand-logo" src="logo.jpg" alt="Ethio Robo Robotics logo">
+        <span class="brand-text">
+          <strong>ETHIO ROBO</strong>
           <span>Robotics &amp; AI</span>
-        </div>
+        </span>
       </a>
 
-      <nav class="nav-links" aria-label="Main navigation">
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        aria-controls="mainNav"
+      >☰</button>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
         <a href="#opportunity">Opportunity</a>
+        <a href="#enjoy-ai-global">Global Final</a>
         <a href="#payment">Payment</a>
         <a class="nav-cta" href="#register">Register Now ↗</a>
       </nav>
@@ -859,169 +1147,220 @@
   </header>
 
   <main>
+    <!-- Main hero -->
     <section class="hero" id="home">
       <div class="container">
         <div class="hero-content">
-          <div class="eyebrow">🤖 AI · Robotics · Innovation</div>
-
-          <h1>
-            Build the Future with
-            <span>AI &amp; Robotics.</span>
-          </h1>
-
-          <p>
-            Take a step toward the world of robotics, artificial intelligence,
-            and future-ready technology with Ethio Robo Robotics.
-            Explore the opportunity and complete your registration online.
+          <div class="hero-badge">✦ Discover the Future of Technology</div>
+          <h1>Build the Future with <span>AI &amp; Robotics.</span></h1>
+          <p class="hero-description">
+            Explore the exciting world of artificial intelligence and robotics.
+            Discover an international technology opportunity and take your
+            curiosity, creativity, and innovation to the next level.
           </p>
-
           <div class="hero-actions">
-            <a class="button" href="#register">Start Registration →</a>
-            <a class="button button-light" href="#opportunity">
-              Explore the Opportunity
-            </a>
+            <a class="btn btn-primary" href="#register">Start Your Registration ↗</a>
+            <a class="btn btn-outline" href="#opportunity">Explore the Opportunity</a>
           </div>
-
-          <div class="hero-note">
-            Registration fee: <strong>5,000 ETB</strong>
-          </div>
+          <p class="hero-footnote">
+            For students and aspiring innovators interested in AI and robotics.
+          </p>
         </div>
       </div>
     </section>
 
+    <!-- Enjoy AI Global Final announcement -->
+    <section class="global-final-section" id="enjoy-ai-global">
+      <div class="global-final-content">
+        <div class="global-final-badge">
+          ✦ International AI &amp; Robotics Opportunity
+        </div>
+
+        <h2>
+          Participate in the
+          <span>Enjoy AI Global Final!</span>
+        </h2>
+
+        <p class="global-final-description">
+          Take your passion for artificial intelligence and robotics to the
+          global stage. Discover an exciting international technology
+          opportunity in China and be part of the future of innovation.
+        </p>
+
+        <div class="global-final-details">
+          <div class="global-final-detail">
+            <small>Destination</small>
+            <strong>🇨🇳 China</strong>
+          </div>
+
+          <div class="global-final-detail">
+            <small>Event</small>
+            <strong>Enjoy AI Global Final</strong>
+          </div>
+
+          <div class="global-final-detail">
+            <small>Scheduled</small>
+            <strong>December 2026</strong>
+          </div>
+        </div>
+
+        <a
+          class="global-final-button"
+          href="https://enjoyailobal.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Explore Enjoy AI Global <span aria-hidden="true">↗</span>
+        </a>
+
+        <p class="global-final-note">
+          Visit the event website for official details and participation information.
+        </p>
+      </div>
+    </section>
+
+    <!-- Explore technology -->
+    <section class="section gallery-section" id="opportunity">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Explore Technology</span>
+          <h2>Imagine It. Build It. Make It Real.</h2>
+          <p>
+            Discover how robotics and artificial intelligence can turn
+            creative ideas into practical solutions for tomorrow.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <article class="gallery-card">
+            <img
+              src="rob1.jpg"
+              alt="Students exploring robotics and technology"
+              loading="lazy"
+            >
+            <div class="gallery-caption">
+              <h3>Robotics in Action</h3>
+              <p>Explore technology through creativity, engineering, and hands-on learning.</p>
+            </div>
+          </article>
+
+          <article class="gallery-card">
+            <img
+              src="rob2.jpg"
+              alt="Artificial intelligence and robotics innovation"
+              loading="lazy"
+            >
+            <div class="gallery-caption">
+              <h3>Artificial Intelligence</h3>
+              <p>Discover new ideas and the possibilities of intelligent technology.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Highlights -->
     <section class="section">
       <div class="container">
         <div class="section-heading">
-          <div class="section-kicker">Explore Technology</div>
-          <h2>Discover a World of Robotics and AI</h2>
+          <span class="eyebrow">Why Explore AI &amp; Robotics?</span>
+          <h2>Technology Can Open New Possibilities</h2>
           <p>
-            Inspire curiosity, develop technical skills, and explore the
-            technologies shaping tomorrow.
+            Build curiosity, discover emerging technologies, and learn more
+            about the global robotics and AI community.
           </p>
         </div>
 
-        <div class="gallery">
-          <div class="gallery-card">
-            <img
-              src="rob1.jpg"
-              alt="Robotics and artificial intelligence"
-              loading="lazy"
-            >
-            <div class="gallery-caption">
-              Discover Robotics &amp; AI
-            </div>
-          </div>
-
-          <div class="gallery-card">
-            <img
-              src="rob2.jpg"
-              alt="Young people exploring technology"
-              loading="lazy"
-            >
-            <div class="gallery-caption">
-              Inspire the Next Generation
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-light">
-      <div class="container">
-        <div class="section-heading">
-          <div class="section-kicker">Why Robotics?</div>
-          <h2>Skills for the Next Generation</h2>
-          <p>
-            Technology education can help young people explore new ideas,
-            solve problems, and prepare for a changing world.
-          </p>
-        </div>
-
-        <div class="highlights">
+        <div class="highlights-grid">
           <article class="highlight-card">
-            <div class="highlight-icon">🤖</div>
+            <div class="highlight-icon" aria-hidden="true">🤖</div>
             <h3>Robotics</h3>
             <p>
-              Explore how robots work and how engineering brings ideas to life.
+              Explore how robots are designed, programmed, and used to solve
+              real-world problems.
             </p>
           </article>
 
           <article class="highlight-card">
-            <div class="highlight-icon">🧠</div>
+            <div class="highlight-icon" aria-hidden="true">🧠</div>
             <h3>Artificial Intelligence</h3>
             <p>
-              Discover the growing role of AI in technology and everyday life.
+              Discover intelligent systems, automation, and the technologies
+              shaping our digital future.
             </p>
           </article>
 
           <article class="highlight-card">
-            <div class="highlight-icon">🌍</div>
+            <div class="highlight-icon" aria-hidden="true">🌏</div>
             <h3>Global Exposure</h3>
             <p>
-              Learn about international technology opportunities and innovation.
+              Learn about an international AI and robotics opportunity
+              connected with the Enjoy AI Global Final in China.
             </p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="opportunity">
+    <!-- Participation steps -->
+    <section class="section steps-section">
       <div class="container">
         <div class="section-heading">
-          <div class="section-kicker">The Opportunity</div>
-          <h2>Take Your First Step</h2>
+          <span class="eyebrow">Getting Started</span>
+          <h2>Three Simple Steps</h2>
           <p>
-            Learn about the opportunity, complete your registration,
-            and provide the required payment evidence.
+            Complete the registration form and provide the required
+            payment confirmation.
           </p>
         </div>
 
-        <div class="opportunity-grid">
-          <article class="opportunity-card">
-            <div class="opportunity-number">01 / REGISTER</div>
+        <div class="steps-grid">
+          <article class="step-card">
+            <div class="step-number">01</div>
             <h3>Submit Your Details</h3>
             <p>
-              Complete the online form with your correct contact information
-              and student details.
+              Fill in your contact information and the requested registration
+              details accurately.
             </p>
           </article>
 
-          <article class="opportunity-card">
-            <div class="opportunity-number">02 / PAYMENT</div>
+          <article class="step-card">
+            <div class="step-number">02</div>
             <h3>Complete Payment</h3>
             <p>
-              Pay the 5,000 ETB registration fee using the payment details
-              displayed on this page.
+              Review the listed payment methods and verify the recipient
+              details before transferring the registration fee.
             </p>
           </article>
 
-          <article class="opportunity-card">
-            <div class="opportunity-number">03 / CONFIRM</div>
+          <article class="step-card">
+            <div class="step-number">03</div>
             <h3>Upload Your Receipt</h3>
             <p>
-              Attach a clear screenshot of your payment when submitting
-              your registration form.
+              Attach a clear screenshot of your payment receipt and submit
+              the completed registration form.
             </p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section register-section" id="register">
+    <!-- Registration and payment -->
+    <section class="section registration-section" id="register">
       <div class="container">
         <div class="section-heading">
-          <div class="section-kicker">Online Registration</div>
-          <h2>Reserve Your Registration</h2>
+          <span class="eyebrow">Registration</span>
+          <h2>Take the Next Step</h2>
           <p>
-            Review the payment information and complete all required fields.
-            Your payment screenshot is required for submission.
+            Complete the form below and attach your payment screenshot.
+            Please check all details before submitting.
           </p>
         </div>
 
-        <div class="registration-layout">
+        <div class="registration-grid">
+          <!-- Payment details -->
           <aside class="payment-panel" id="payment">
             <h3>Registration Payment</h3>
-
             <p class="panel-intro">
               Make your payment using one of the listed methods, then attach
               your payment screenshot in the registration form.
@@ -1057,253 +1396,300 @@
             </div>
           </aside>
 
-          <form
-            class="registration-form"
-            id="registrationForm"
-            action="https://formsubmit.co/ethiorobo@gmail.com"
-            method="POST"
-            enctype="multipart/form-data"
-          >
-            <h3>Applicant Information</h3>
-            <p class="form-intro">
-              Fields marked with an asterisk (*) are required.
+          <!-- Registration form -->
+          <div class="form-panel">
+            <h3>Registration Form</h3>
+            <p>
+              Fields marked with an asterisk (*) are required. Your payment
+              screenshot is required to submit this form.
             </p>
 
-            <input
-              type="hidden"
-              name="_subject"
-              value="New Ethio Robo Robotics Registration"
+            <form
+              class="registration-form"
+              id="registrationForm"
+              action="https://formsubmit.co/ethiorobo@gmail.com"
+              method="POST"
+              enctype="multipart/form-data"
             >
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_captcha" value="true">
-
-            <input
-              type="text"
-              name="_honey"
-              tabindex="-1"
-              autocomplete="off"
-              aria-hidden="true"
-              style="display:none"
-            >
-
-            <div class="form-grid">
-              <div class="form-group">
-                <label for="fullName">
-                  Full Name <span class="required">*</span>
-                </label>
-                <input
-                  type="text"
-                  id="fullName"
-                  name="Full Name"
-                  placeholder="Enter your full name"
-                  autocomplete="name"
-                  required
-                >
-              </div>
-
-              <div class="form-group">
-                <label for="phone">
-                  Phone Number <span class="required">*</span>
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="Phone Number"
-                  placeholder="e.g. 0912345678"
-                  autocomplete="tel"
-                  required
-                >
-              </div>
-
-              <div class="form-group">
-                <label for="email">
-                  Email Address <span class="required">*</span>
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="Email Address"
-                  placeholder="Enter your email address"
-                  autocomplete="email"
-                  required
-                >
-              </div>
-
-              <div class="form-group">
-                <label for="location">
-                  City / Region <span class="required">*</span>
-                </label>
-                <input
-                  type="text"
-                  id="location"
-                  name="City or Region"
-                  placeholder="Enter your city or region"
-                  autocomplete="address-level1"
-                  required
-                >
-              </div>
-
-              <div class="form-group full-width">
-                <label for="studentLevel">
-                  Student Level <span class="required">*</span>
-                </label>
-                <select
-                  id="studentLevel"
-                  name="Student Level"
-                  required
-                >
-                  <option value="" disabled selected>
-                    Select student level
-                  </option>
-                  <option>Primary School</option>
-                  <option>Middle School</option>
-                  <option>High School</option>
-                  <option>University / College</option>
-                  <option>Other</option>
-                </select>
-              </div>
-
-              <div class="form-group full-width">
-                <label for="paymentMethod">
-                  Payment Method <span class="required">*</span>
-                </label>
-                <select
-                  id="paymentMethod"
-                  name="Payment Method"
-                  required
-                >
-                  <option value="" disabled selected>
-                    Select your payment method
-                  </option>
-                  <option>Telebirr</option>
-                  <option>Commercial Bank of Ethiopia (CBE)</option>
-                </select>
-              </div>
-
-              <div class="form-group full-width">
-                <label for="paymentScreenshot">
-                  Payment Screenshot <span class="required">*</span>
-                </label>
-                <input
-                  type="file"
-                  id="paymentScreenshot"
-                  name="Payment Screenshot"
-                  accept=".jpg,.jpeg,.png,.webp,image/jpeg,image/png,image/webp"
-                  required
-                >
-                <small class="form-help">
-                  Upload a clear JPG, PNG, or WebP image. Maximum file size: 5 MB.
-                </small>
-              </div>
-
-              <div class="form-group full-width">
-                <label for="additionalInfo">
-                  Additional Information (Optional)
-                </label>
-                <textarea
-                  id="additionalInfo"
-                  name="Additional Information"
-                  placeholder="Anything else you would like us to know?"
-                ></textarea>
-              </div>
-            </div>
-
-            <label class="consent" for="consent">
               <input
-                type="checkbox"
-                id="consent"
-                name="Applicant Consent"
-                value="I confirm the information provided is correct"
-                required
+                type="hidden"
+                name="_subject"
+                value="New Ethio Robo Robotics Registration"
               >
-              <span>
-                I confirm that the information I provided is accurate and that
-                I have checked the payment details before submitting this form.
-                <span class="required">*</span>
-              </span>
-            </label>
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_captcha" value="true">
 
-            <button class="button submit-button" type="submit">
-              Submit Registration →
-            </button>
+              <!-- Honeypot anti-spam field: leave empty -->
+              <input
+                type="text"
+                name="_honey"
+                tabindex="-1"
+                autocomplete="off"
+                aria-hidden="true"
+                style="position:absolute;left:-9999px;width:1px;height:1px;"
+              >
 
-            <p class="form-disclaimer">
-              Please ensure your payment screenshot is attached before submitting.
-            </p>
-          </form>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="fullName">Full Name <span class="required">*</span></label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    id="fullName"
+                    name="Full Name"
+                    placeholder="Enter your full name"
+                    autocomplete="name"
+                    required
+                  >
+                </div>
+
+                <div class="form-group">
+                  <label for="phone">Phone Number <span class="required">*</span></label>
+                  <input
+                    class="form-control"
+                    type="tel"
+                    id="phone"
+                    name="Phone Number"
+                    placeholder="e.g. 0911 234 567"
+                    autocomplete="tel"
+                    required
+                  >
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email Address <span class="required">*</span></label>
+                  <input
+                    class="form-control"
+                    type="email"
+                    id="email"
+                    name="Email Address"
+                    placeholder="you@example.com"
+                    autocomplete="email"
+                    required
+                  >
+                </div>
+
+                <div class="form-group">
+                  <label for="city">City / Region <span class="required">*</span></label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    id="city"
+                    name="City / Region"
+                    placeholder="Enter your city or region"
+                    autocomplete="address-level1"
+                    required
+                  >
+                </div>
+
+                <div class="form-group">
+                  <label for="studentLevel">Student Level <span class="required">*</span></label>
+                  <select
+                    class="form-control"
+                    id="studentLevel"
+                    name="Student Level"
+                    required
+                  >
+                    <option value="">Select your level</option>
+                    <option value="Primary School">Primary School</option>
+                    <option value="Middle School">Middle School</option>
+                    <option value="High School">High School</option>
+                    <option value="University / College">University / College</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="paymentMethod">Payment Method <span class="required">*</span></label>
+                  <select
+                    class="form-control"
+                    id="paymentMethod"
+                    name="Payment Method"
+                    required
+                  >
+                    <option value="">Select payment method</option>
+                    <option value="Telebirr">Telebirr</option>
+                    <option value="CBE">Commercial Bank of Ethiopia (CBE)</option>
+                  </select>
+                </div>
+
+                <div class="form-group full-width">
+                  <label for="paymentScreenshot">
+                    Payment Screenshot <span class="required">*</span>
+                  </label>
+                  <input
+                    class="form-control"
+                    type="file"
+                    id="paymentScreenshot"
+                    name="Payment Screenshot"
+                    accept=".jpg,.jpeg,.png,.webp,image/jpeg,image/png,image/webp"
+                    required
+                  >
+                  <small class="field-help">
+                    Upload a clear JPG, PNG, or WebP image. Maximum file size: 5 MB.
+                  </small>
+                </div>
+
+                <div class="form-group full-width">
+                  <label for="additionalInfo">Additional Information (Optional)</label>
+                  <textarea
+                    class="form-control"
+                    id="additionalInfo"
+                    name="Additional Information"
+                    placeholder="Share any additional information you would like us to know."
+                  ></textarea>
+                </div>
+              </div>
+
+              <label class="consent-row" for="consent">
+                <input type="checkbox" id="consent" name="Consent" value="Accepted" required>
+                <span>
+                  I confirm that the information provided is accurate and
+                  understand that registration and payment details should be
+                  verified before submission. <span class="required">*</span>
+                </span>
+              </label>
+
+              <button class="btn btn-primary submit-button" type="submit">
+                Submit Registration <span aria-hidden="true">→</span>
+              </button>
+
+              <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+
+              <p class="privacy-note">
+                Your form will be submitted to the registration email address.
+                Please keep a copy of your payment receipt.
+              </p>
+            </form>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- TikTok -->
     <section class="social-section">
-      <div class="container">
-        <h2>Stay Connected with Ethio Robo</h2>
-        <p>
-          Follow our TikTok page for updates, activities, and robotics-related
-          content.
-        </p>
+      <div class="container social-inner">
+        <div>
+          <h2>Follow Ethio Robo Robotics</h2>
+          <p>
+            Stay connected for updates, technology inspiration, and
+            information about robotics and AI opportunities.
+          </p>
+        </div>
+
         <a
-          class="button"
+          class="btn btn-light"
           href="https://vt.tiktok.com/ZSgedqDW7/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          ▶ Follow Us on TikTok
+          Follow Us on TikTok ↗
         </a>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
-      <p>
-        <strong>Ethio Robo Robotics</strong> · AI, Robotics &amp; Innovation
-      </p>
-      <p>Contact: 0911675401</p>
-      <p>
+      <div class="footer-inner">
+        <div>
+          <div class="footer-brand">ETHIO ROBO ROBOTICS</div>
+          <p class="footer-contact">
+            Contact: <a href="tel:+251911675401">0911675401</a>
+          </p>
+          <p class="footer-contact">
+            Email: <a href="mailto:ethiorobo@gmail.com">ethiorobo@gmail.com</a>
+          </p>
+        </div>
+
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="#home">Home</a>
+          <a href="#opportunity">Opportunity</a>
+          <a href="#enjoy-ai-global">Enjoy AI Global Final</a>
+          <a href="#payment">Payment</a>
+          <a href="#register">Register</a>
+        </nav>
+      </div>
+
+      <div class="copyright">
         © <span id="currentYear"></span> Ethio Robo Robotics. All rights reserved.
-      </p>
+      </div>
     </div>
   </footer>
 
   <script>
+    // Mobile navigation
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNav = document.getElementById("mainNav");
+
+    menuToggle.addEventListener("click", function () {
+      const isOpen = mainNav.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.textContent = isOpen ? "×" : "☰";
+    });
+
+    // Close the mobile menu after selecting a navigation link
+    mainNav.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        mainNav.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    // Footer year
     document.getElementById("currentYear").textContent =
       new Date().getFullYear();
 
+    // Validate the payment screenshot before allowing the normal form POST
     const registrationForm = document.getElementById("registrationForm");
-    const screenshotInput = document.getElementById("paymentScreenshot");
-    const maxFileSize = 5 * 1024 * 1024;
-
-    const allowedTypes = [
-      "image/jpeg",
-      "image/png",
-      "image/webp"
-    ];
+    const paymentScreenshot = document.getElementById("paymentScreenshot");
+    const formStatus = document.getElementById("formStatus");
 
     registrationForm.addEventListener("submit", function (event) {
-      const file = screenshotInput.files[0];
+      formStatus.textContent = "";
+
+      const file = paymentScreenshot.files[0];
 
       if (!file) {
         event.preventDefault();
-        alert("Please attach your payment screenshot before submitting.");
-        screenshotInput.focus();
+        formStatus.textContent =
+          "Please upload your payment screenshot before submitting.";
+        paymentScreenshot.focus();
         return;
       }
 
-      if (!allowedTypes.includes(file.type)) {
+      const allowedTypes = ["image/jpeg", "image/png", "image/webp"];
+      const allowedExtensions = /\.(jpe?g|png|webp)$/i;
+
+      if (
+        !allowedTypes.includes(file.type) ||
+        !allowedExtensions.test(file.name)
+      ) {
         event.preventDefault();
-        alert("Please upload a JPG, PNG, or WebP image.");
-        screenshotInput.value = "";
-        screenshotInput.focus();
+        formStatus.textContent =
+          "Please upload a JPG, PNG, or WebP image.";
+        paymentScreenshot.value = "";
+        paymentScreenshot.focus();
         return;
       }
 
-      if (file.size > maxFileSize) {
+      const maxSize = 5 * 1024 * 1024;
+
+      if (file.size > maxSize) {
         event.preventDefault();
-        alert("Your payment screenshot must be 5 MB or smaller.");
-        screenshotInput.value = "";
-        screenshotInput.focus();
+        formStatus.textContent =
+          "Your screenshot exceeds 5 MB. Please choose a smaller image.";
+        paymentScreenshot.value = "";
+        paymentScreenshot.focus();
+        return;
       }
+
+      // Do not prevent the default submission.
+      // The browser submits the multipart form to FormSubmit,
+      // including the payment screenshot attachment.
+      formStatus.textContent = "Submitting your registration...";
     });
   </script>
 </body>
