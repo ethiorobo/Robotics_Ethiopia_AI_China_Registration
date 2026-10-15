@@ -11,7 +11,7 @@
   <style>
     :root {
       --navy: #081c3a;
-      --blue: #123c76;
+      --blue: #164c88;
       --gold: #f7bc4a;
       --red: #e94747;
       --ink: #17243b;
@@ -25,9 +25,8 @@
     }
 
     html {
-      width: 100%;
       scroll-behavior: smooth;
-      scroll-padding-top: 85px;
+      scroll-padding-top: 90px;
       overflow-x: clip;
     }
 
@@ -67,12 +66,11 @@
     }
 
     .announcement {
-      padding: 9px 16px;
+      padding: 9px 15px;
       text-align: center;
       color: #fff;
       background: var(--navy);
       font-size: 13px;
-      letter-spacing: .2px;
     }
 
     .announcement strong {
@@ -86,10 +84,10 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
+      gap: 18px;
       width: 100%;
       padding: 12px max(5%, calc((100% - 1200px) / 2));
-      background: rgba(255,255,255,.96);
+      background: rgba(255,255,255,.97);
       border-bottom: 1px solid var(--line);
       backdrop-filter: blur(12px);
     }
@@ -97,9 +95,8 @@
     .brand {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 11px;
       min-width: 0;
-      flex-shrink: 1;
       text-decoration: none;
     }
 
@@ -107,20 +104,20 @@
       width: 52px;
       height: 52px;
       object-fit: contain;
-      border-radius: 12px;
       flex-shrink: 0;
+      border-radius: 12px;
     }
 
     .brand-name {
       color: var(--navy);
-      font-size: 17px;
+      font-size: 16px;
       font-weight: 900;
       line-height: 1.2;
     }
 
     .brand-sub {
       color: var(--muted);
-      font-size: 11px;
+      font-size: 10px;
       letter-spacing: 1px;
       text-transform: uppercase;
     }
@@ -129,7 +126,7 @@
       display: flex;
       align-items: center;
       flex-wrap: wrap;
-      gap: 23px;
+      gap: 22px;
       font-size: 14px;
       font-weight: 700;
     }
@@ -139,7 +136,7 @@
     }
 
     .nav-links a:hover {
-      color: #c88713;
+      color: #b77b0b;
     }
 
     .nav-cta,
@@ -148,9 +145,9 @@
       align-items: center;
       justify-content: center;
       min-height: 46px;
+      padding: 12px 20px;
       border: 0;
       border-radius: 12px;
-      padding: 13px 20px;
       color: var(--navy);
       background: var(--gold);
       text-decoration: none;
@@ -166,69 +163,74 @@
       box-shadow: 0 8px 22px rgba(247,188,74,.3);
     }
 
+    /* HERO IMAGE: rob1.jpg */
     .hero {
       position: relative;
       isolation: isolate;
       overflow: hidden;
-      color: white;
-      background:
-        linear-gradient(
-          90deg,
-          rgba(5,20,44,.96) 0%,
-          rgba(7,28,59,.88) 48%,
-          rgba(7,28,59,.28) 100%
-        ),
-        url("ai.png") center 43% / cover no-repeat,
-        linear-gradient(135deg, #071a36, #164c87);
+      color: #fff;
+      background: var(--navy);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background-image: url("rob1.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      transform: scale(1.01);
     }
 
     .hero::after {
       content: "";
       position: absolute;
+      inset: 0;
       z-index: -1;
-      width: 420px;
-      height: 420px;
-      right: -120px;
-      bottom: -230px;
-      border: 1px solid rgba(255,255,255,.22);
-      border-radius: 50%;
-      box-shadow:
-        0 0 0 45px rgba(255,255,255,.035),
-        0 0 0 90px rgba(255,255,255,.025);
-      pointer-events: none;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(4,17,38,.94) 0%,
+          rgba(5,23,48,.82) 48%,
+          rgba(5,23,48,.30) 100%
+        );
     }
 
     .hero-inner {
-      width: min(1200px, 90%);
-      margin: auto;
-      min-height: 530px;
       display: flex;
       align-items: center;
-      padding: 72px 0;
+      width: min(1200px, 90%);
+      min-height: 570px;
+      margin: auto;
+      padding: 75px 0;
     }
 
     .hero-content {
-      max-width: 700px;
+      width: 100%;
+      max-width: 710px;
     }
 
     .eyebrow {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      border: 1px solid rgba(255,255,255,.25);
-      background: rgba(255,255,255,.08);
-      border-radius: 99px;
+      max-width: 100%;
       padding: 7px 13px;
+      border: 1px solid rgba(255,255,255,.28);
+      border-radius: 99px;
       color: #ffe3a1;
+      background: rgba(255,255,255,.08);
       font-size: 12px;
       font-weight: 800;
-      letter-spacing: 1.3px;
+      letter-spacing: 1px;
       text-transform: uppercase;
     }
 
     h1 {
       margin: 22px 0 18px;
-      font-size: clamp(38px, 6vw, 68px);
+      font-size: clamp(40px, 6vw, 70px);
       line-height: 1.06;
       letter-spacing: -2px;
       overflow-wrap: anywhere;
@@ -239,7 +241,7 @@
     }
 
     .hero p {
-      max-width: 610px;
+      max-width: 620px;
       margin: 0 0 27px;
       color: #e2eaf7;
       font-size: clamp(16px, 2vw, 19px);
@@ -248,7 +250,6 @@
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
-      align-items: center;
       gap: 13px;
     }
 
@@ -258,28 +259,118 @@
       justify-content: center;
       min-height: 46px;
       padding: 12px 18px;
-      border: 1px solid rgba(255,255,255,.45);
+      border: 1px solid rgba(255,255,255,.5);
       border-radius: 12px;
       color: #fff;
       text-decoration: none;
       font-weight: 800;
-      touch-action: manipulation;
     }
 
     .hero-note {
-      margin-top: 23px;
+      margin-top: 22px;
       color: #d2deef;
       font-size: 12px;
+    }
+
+    /* RESPONSIVE IMAGE GALLERY */
+    .image-showcase {
+      width: min(1100px, 90%);
+      margin: 65px auto 0;
+    }
+
+    .showcase-heading {
+      max-width: 740px;
+      margin: 0 auto 28px;
+      text-align: center;
+    }
+
+    .section-kicker {
+      color: #b77b0b;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .showcase-heading h2 {
+      margin: 9px 0 12px;
+      color: var(--navy);
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.15;
+    }
+
+    .showcase-heading p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .image-card {
+      position: relative;
+      min-width: 0;
+      overflow: hidden;
+      border: 1px solid #e2e8f1;
+      border-radius: 22px;
+      background: #fff;
+      box-shadow: var(--shadow);
+      transition: transform .25s, box-shadow .25s;
+    }
+
+    .image-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 25px 60px rgba(8,28,58,.17);
+    }
+
+    .image-frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      background: linear-gradient(135deg, #dbe8f7, #f6f8fc);
+    }
+
+    .image-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform .45s ease;
+    }
+
+    .image-card:hover .image-frame img {
+      transform: scale(1.045);
+    }
+
+    .image-card-content {
+      padding: 22px 23px 24px;
+    }
+
+    .image-card-content h3 {
+      margin: 0 0 7px;
+      color: var(--navy);
+      font-size: 21px;
+      line-height: 1.3;
+    }
+
+    .image-card-content p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
     }
 
     .highlights {
       position: relative;
       z-index: 2;
-      width: min(1100px, 90%);
-      margin: -32px auto 0;
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 15px;
+      width: min(1100px, 90%);
+      margin: 45px auto 0;
     }
 
     .highlight {
@@ -287,7 +378,7 @@
       padding: 23px;
       border: 1px solid var(--line);
       border-radius: 17px;
-      background: white;
+      background: #fff;
       box-shadow: var(--shadow);
     }
 
@@ -301,7 +392,7 @@
       color: var(--navy);
     }
 
-    .highlight span {
+    .highlight span:last-child {
       color: var(--muted);
       font-size: 13px;
     }
@@ -317,15 +408,7 @@
       text-align: center;
     }
 
-    .section-kicker {
-      color: #b77b0b;
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    h2 {
+    .section-heading h2 {
       margin: 9px 0 12px;
       color: var(--navy);
       font-size: clamp(28px, 4vw, 42px);
@@ -334,8 +417,8 @@
     }
 
     .section-heading p {
-      color: var(--muted);
       margin: 0;
+      color: var(--muted);
     }
 
     .journey-grid {
@@ -347,9 +430,9 @@
     .journey-card {
       min-width: 0;
       padding: 25px;
-      background: white;
       border: 1px solid var(--line);
       border-radius: 17px;
+      background: #fff;
     }
 
     .journey-number {
@@ -358,8 +441,8 @@
       width: 44px;
       height: 44px;
       border-radius: 13px;
-      background: #fff1ce;
       color: #8c5b00;
+      background: #fff1ce;
       font-weight: 900;
     }
 
@@ -369,9 +452,9 @@
     }
 
     .journey-card p {
+      margin-bottom: 0;
       color: var(--muted);
       font-size: 14px;
-      margin-bottom: 0;
     }
 
     .registration-layout {
@@ -385,7 +468,7 @@
       min-width: 0;
       padding: 30px;
       border-radius: 20px;
-      color: white;
+      color: #fff;
       background: linear-gradient(150deg, var(--navy), #174c88);
       box-shadow: var(--shadow);
     }
@@ -403,9 +486,9 @@
     .fee-label {
       margin: 22px 0;
       padding: 19px;
+      border: 1px solid rgba(255,255,255,.15);
       border-radius: 14px;
       background: rgba(255,255,255,.09);
-      border: 1px solid rgba(255,255,255,.15);
     }
 
     .fee-label small {
@@ -414,9 +497,9 @@
     }
 
     .fee-amount {
+      color: var(--gold);
       font-size: 36px;
       font-weight: 950;
-      color: var(--gold);
       overflow-wrap: anywhere;
     }
 
@@ -426,8 +509,8 @@
     }
 
     .account small {
-      color: #d1def0;
       display: block;
+      color: #d1def0;
     }
 
     .account strong {
@@ -436,8 +519,8 @@
     }
 
     .account-name {
-      font-size: 13px !important;
-      color: #f2dba9;
+      color: #f2dba9 !important;
+      font-size: 13px;
     }
 
     .payment-warning {
@@ -454,7 +537,7 @@
       padding: clamp(22px, 4vw, 38px);
       border: 1px solid var(--line);
       border-radius: 20px;
-      background: white;
+      background: #fff;
       box-shadow: var(--shadow);
     }
 
@@ -487,9 +570,9 @@
     label {
       display: block;
       margin-bottom: 7px;
+      color: #293852;
       font-size: 13px;
       font-weight: 800;
-      color: #293852;
     }
 
     .required {
@@ -504,11 +587,11 @@
       min-width: 0;
       min-height: 48px;
       padding: 12px 13px;
-      color: var(--ink);
-      background: #fbfcfe;
       border: 1px solid #d9e1ec;
       border-radius: 10px;
       outline: none;
+      color: var(--ink);
+      background: #fbfcfe;
     }
 
     textarea {
@@ -526,6 +609,7 @@
       width: 100%;
       min-width: 0;
       padding: 10px;
+      border-radius: 10px;
       background: #fff;
       font-size: 13px;
     }
@@ -535,8 +619,8 @@
       padding: 8px 10px;
       border: 0;
       border-radius: 7px;
-      background: #eaf1fb;
       color: var(--navy);
+      background: #eaf1fb;
       font-weight: 800;
       cursor: pointer;
     }
@@ -569,8 +653,8 @@
       align-items: flex-start;
       gap: 10px;
       margin: 20px 0;
-      font-size: 12px;
       color: #53627a;
+      font-size: 12px;
     }
 
     .confirm input {
@@ -578,8 +662,8 @@
       min-width: 17px;
       min-height: 17px;
       margin-top: 3px;
-      flex: 0 0 auto;
       padding: 0;
+      flex: 0 0 auto;
     }
 
     .submit-button {
@@ -611,9 +695,9 @@
       justify-content: space-between;
       gap: 20px;
       padding: 27px 30px;
-      color: white;
-      background: linear-gradient(110deg, #081c3a, #174c88);
       border-radius: 18px;
+      color: #fff;
+      background: linear-gradient(110deg, #081c3a, #174c88);
     }
 
     .social-banner h3 {
@@ -641,20 +725,20 @@
     }
 
     .footer-brand {
-      color: white;
+      color: #fff;
       font-size: 18px;
       font-weight: 900;
     }
 
-    /* Tablet */
-    @media (max-width: 800px) {
+    /* Tablet screens */
+    @media (max-width: 850px) {
       header {
-        padding: 10px 4%;
+        padding: 11px 4%;
         gap: 12px;
       }
 
       .nav-links {
-        gap: 12px;
+        gap: 13px;
       }
 
       .nav-links .nav-optional {
@@ -662,8 +746,7 @@
       }
 
       .hero-inner {
-        min-height: 480px;
-        padding: 60px 0;
+        min-height: 510px;
       }
 
       .registration-layout {
@@ -671,15 +754,31 @@
       }
 
       .journey-grid {
-        grid-template-columns: minmax(0, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .journey-card:last-child {
+        grid-column: 1 / -1;
+      }
+
+      .image-showcase {
+        margin-top: 50px;
+      }
+
+      .image-grid {
+        gap: 17px;
+      }
+
+      .image-card-content {
+        padding: 18px;
       }
     }
 
-    /* Mobile */
+    /* Mobile phones */
     @media (max-width: 600px) {
       header {
         position: relative;
-        padding: 12px 4%;
+        padding: 10px 3%;
         gap: 8px;
       }
 
@@ -688,17 +787,17 @@
       }
 
       .brand img {
-        width: 36px;
-        height: 36px;
+        width: 39px;
+        height: 39px;
       }
 
       .brand-name {
-        font-size: 12px;
+        font-size: 11px;
       }
 
       .brand-sub {
         font-size: 8px;
-        letter-spacing: .5px;
+        letter-spacing: .4px;
       }
 
       .nav-links {
@@ -706,24 +805,32 @@
       }
 
       .nav-cta {
-        min-height: 42px;
-        padding: 9px 10px;
-        font-size: 12px;
-      }
-
-      .announcement {
-        padding: 9px 10px;
+        min-height: 40px;
+        padding: 8px 10px;
         font-size: 11px;
       }
 
-      .hero {
-        background-position: center, 60% center, center;
+      .announcement {
+        padding: 9px 8px;
+        font-size: 11px;
+      }
+
+      .hero::before {
+        background-position: 58% center;
+      }
+
+      .hero::after {
+        background: linear-gradient(
+          90deg,
+          rgba(4,17,38,.90),
+          rgba(5,23,48,.68)
+        );
       }
 
       .hero-inner {
-        width: 92%;
+        width: 91%;
         min-height: 0;
-        padding: 55px 0 65px;
+        padding: 55px 0 60px;
       }
 
       .hero-content {
@@ -731,23 +838,23 @@
       }
 
       .eyebrow {
-        max-width: 100%;
-        font-size: 10px;
-        letter-spacing: .7px;
+        font-size: 9px;
+        letter-spacing: .5px;
       }
 
       h1 {
+        margin-top: 19px;
         font-size: clamp(35px, 10vw, 48px);
         letter-spacing: -1px;
       }
 
       .hero p {
-        font-size: 16px;
+        font-size: 15px;
       }
 
       .hero-actions {
-        align-items: stretch;
         flex-direction: column;
+        align-items: stretch;
       }
 
       .hero-actions .button,
@@ -756,31 +863,89 @@
         text-align: center;
       }
 
+      /* Images remain visible and stack vertically on mobile */
+      .image-showcase {
+        width: 92%;
+        margin-top: 44px;
+      }
+
+      .showcase-heading {
+        margin-bottom: 23px;
+      }
+
+      .showcase-heading h2 {
+        font-size: 29px;
+      }
+
+      .image-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+      }
+
+      .image-card {
+        border-radius: 18px;
+      }
+
+      .image-frame {
+        aspect-ratio: 4 / 3;
+        min-height: 210px;
+        max-height: 380px;
+      }
+
+      .image-frame img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .image-card-content {
+        padding: 19px;
+      }
+
+      .image-card-content h3 {
+        font-size: 20px;
+      }
+
       .highlights {
         width: 92%;
         grid-template-columns: minmax(0, 1fr);
-        margin-top: 18px;
+        margin-top: 25px;
       }
 
       .highlight {
-        padding: 17px;
+        padding: 18px;
       }
 
       .section {
         width: 92%;
-        margin: 48px auto;
+        margin: 50px auto;
       }
 
       .section-heading {
         margin-bottom: 25px;
       }
 
-      h2 {
-        font-size: clamp(27px, 8vw, 36px);
+      .section-heading h2 {
+        font-size: 29px;
       }
 
-      .registration-layout,
-      .journey-grid,
+      .journey-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .journey-card:last-child {
+        grid-column: auto;
+      }
+
+      .payment-panel,
+      .form-card {
+        padding: 21px 16px;
+      }
+
+      .fee-amount {
+        font-size: 32px;
+      }
+
       .form-grid {
         grid-template-columns: minmax(0, 1fr);
       }
@@ -789,17 +954,8 @@
         grid-column: auto;
       }
 
-      .payment-panel,
-      .form-card {
-        padding: 20px 16px;
-      }
-
-      .fee-amount {
-        font-size: 32px;
-      }
-
       .upload-box {
-        padding: 14px 12px;
+        padding: 14px 11px;
       }
 
       .social-banner {
@@ -818,7 +974,7 @@
       }
     }
 
-    /* Extra-small phones */
+    /* Very small mobile phones */
     @media (max-width: 360px) {
       .brand-name {
         font-size: 10px;
@@ -829,16 +985,16 @@
       }
 
       .nav-cta {
-        padding: 8px;
-        font-size: 11px;
-      }
-
-      .announcement {
+        padding: 7px;
         font-size: 10px;
       }
 
       .hero-inner {
-        padding: 45px 0 55px;
+        padding: 44px 0 50px;
+      }
+
+      .image-frame {
+        min-height: 190px;
       }
 
       .form-card h3 {
@@ -847,6 +1003,19 @@
 
       .account strong {
         font-size: 17px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
       }
     }
   </style>
@@ -860,11 +1029,7 @@
 
   <header>
     <a class="brand" href="#home" aria-label="Ethio Robo Robotics home">
-      <img
-        src="logo.jpg"
-        alt="Ethio Robo Robotics logo"
-        onerror="this.style.display='none'"
-      >
+      <img src="logo.jpg" alt="Ethio Robo Robotics logo">
       <span>
         <span class="brand-name">ETHIO ROBO ROBOTICS</span>
         <span class="brand-sub" style="display:block">
@@ -881,7 +1046,7 @@
   </header>
 
   <main>
-    <!-- Hero -->
+    <!-- Hero section uses rob1.jpg -->
     <section class="hero" id="home">
       <div class="hero-inner">
         <div class="hero-content">
@@ -915,6 +1080,57 @@
             For students and families interested in AI, robotics and international learning.
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Attractive image gallery: rob1.jpg and rob2.jpg -->
+    <section class="image-showcase" aria-label="Robotics image gallery">
+      <div class="showcase-heading">
+        <span class="section-kicker">Innovation has no limits</span>
+        <h2>Imagine what you can build.</h2>
+        <p>
+          Discover the exciting world of robotics, artificial intelligence
+          and technology shaping the future.
+        </p>
+      </div>
+
+      <div class="image-grid">
+        <article class="image-card">
+          <div class="image-frame">
+            <img
+              src="rob1.jpg"
+              alt="Robotics and technology learning experience"
+              loading="eager"
+              fetchpriority="high"
+            >
+          </div>
+
+          <div class="image-card-content">
+            <h3>Explore Robotics</h3>
+            <p>
+              Turn curiosity into creativity and discover how robotics
+              can transform the world around us.
+            </p>
+          </div>
+        </article>
+
+        <article class="image-card">
+          <div class="image-frame">
+            <img
+              src="rob2.jpg"
+              alt="Artificial intelligence and future technology"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="image-card-content">
+            <h3>Discover Tomorrow's Technology</h3>
+            <p>
+              Be inspired by innovation, artificial intelligence
+              and the possibilities of international learning.
+            </p>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -959,7 +1175,7 @@
       <div class="journey-grid">
         <article class="journey-card">
           <div class="journey-number">01</div>
-          <h3>Discover technology</h3>
+          <h3>Discover Technology</h3>
           <p>
             Bring your interest in artificial intelligence, robotics and innovation.
           </p>
@@ -967,7 +1183,7 @@
 
         <article class="journey-card">
           <div class="journey-number">02</div>
-          <h3>Register your interest</h3>
+          <h3>Register Your Interest</h3>
           <p>
             Provide accurate student and guardian-approved contact details where appropriate.
           </p>
@@ -975,7 +1191,7 @@
 
         <article class="journey-card">
           <div class="journey-number">03</div>
-          <h3>Follow the next steps</h3>
+          <h3>Follow the Next Steps</h3>
           <p>
             Keep your contact details active for official updates about the opportunity.
           </p>
@@ -998,7 +1214,7 @@
 
         <!-- Payment details -->
         <aside class="payment-panel" id="payment">
-          <h3>Registration payment</h3>
+          <h3>Registration Payment</h3>
 
           <p>
             Make your payment using one of the listed methods, then attach
@@ -1036,7 +1252,7 @@
 
         <!-- Registration form -->
         <div class="form-card">
-          <h3>Student registration form</h3>
+          <h3>Student Registration Form</h3>
 
           <p class="form-intro">
             Fields marked with <span class="required">*</span> are compulsory.
@@ -1173,7 +1389,7 @@
                   <div class="upload-icon">📸</div>
 
                   <div class="upload-title">
-                    Upload payment screenshot
+                    Upload Payment Screenshot
                     <span class="required">*</span>
                   </div>
 
@@ -1246,7 +1462,6 @@
               Your registration information will be sent to the registration
               email for processing. Please do not upload unrelated personal documents.
             </p>
-
           </form>
         </div>
       </div>
@@ -1256,7 +1471,7 @@
     <section class="section">
       <div class="social-banner">
         <div>
-          <h3>Follow the journey on TikTok</h3>
+          <h3>Follow the Journey on TikTok</h3>
           <p>
             Stay connected with Ethio Robo Robotics and follow updates.
           </p>
@@ -1272,7 +1487,6 @@
         </a>
       </div>
     </section>
-
   </main>
 
   <!-- Footer preserved -->
@@ -1383,8 +1597,8 @@
       }
 
       /*
-        Keep normal form submission with multipart/form-data
-        so the screenshot is sent as a real file attachment.
+        Normal multipart/form-data submission is retained
+        so the payment screenshot can be sent as a file attachment.
       */
       submitButton.textContent = "Submitting registration…";
       submitButton.disabled = true;
